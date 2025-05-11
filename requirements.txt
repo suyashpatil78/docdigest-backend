@@ -1,0 +1,10 @@
+flask
+flask-cors
+openai
+python-dotenv
+beautifulsoup4
+pdfplumber
+PyMuPDF
+requests
+flask-limiter
+redis>=3.0
