@@ -29,6 +29,6 @@ def init_scheduler(app):
         id='self_ping_job',
         func=self_ping,
         trigger='interval',
-        minutes=1
+        minutes=10
     )
     return scheduler 

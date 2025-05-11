@@ -16,7 +16,7 @@ limiter = Limiter(
     get_remote_address,
     app=app,
     storage_uri=os.getenv("REDIS_URI"),
-    default_limits=["50 per hour"]
+    default_limits=["15 per minute"]
 )
 
 @limiter.request_filter
