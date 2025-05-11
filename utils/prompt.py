@@ -4,10 +4,9 @@ As a professional summarizer, create a concise and comprehensive summary of the 
 ### General Guidelines
 
 - Craft a summary that is detailed, thorough, in-depth, and complex, while maintaining clarity and conciseness.
-- Use bullet points and lists to organize information.
 - Incorporate main ideas and essential information, eliminating extraneous language and focusing on critical aspects.
 - Rely strictly on the provided text, without including external information.
-- Format the summary in paragraph form for easy understanding.
+- Use bullet points exclusively to organize information.
 
 By following this optimized prompt, you will generate an effective summary that encapsulates the essence of the given text in a clear, concise, and reader-friendly manner.
 """

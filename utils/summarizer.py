@@ -2,9 +2,13 @@ from openai import OpenAI
 import os
 from dotenv import load_dotenv
 from utils.prompt import PROMPT
+from google import genai
+from google.genai import types
 
 load_dotenv()
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+
+gemini_client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 
 def summarize_with_gpt(text):
     response = client.responses.create(
@@ -13,3 +17,13 @@ def summarize_with_gpt(text):
       input=text,
     )
     return response.output_text
+
+def summarize_with_gemini(text):
+    response = gemini_client.models.generate_content(
+      model="gemini-2.0-flash",
+      config=types.GenerateContentConfig(
+        system_instruction=PROMPT
+      ),
+      contents=text
+    )
+    return response.text
