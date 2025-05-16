@@ -1,7 +1,7 @@
 from openai import OpenAI
 import os
 from dotenv import load_dotenv
-from utils.prompt import PROMPT
+from utils.prompt import PDF_PROMPT, CHAT_PROMPT
 from google import genai
 from google.genai import types
 
@@ -22,8 +22,18 @@ def summarize_with_gemini(text):
     response = gemini_client.models.generate_content(
       model="gemini-2.0-flash",
       config=types.GenerateContentConfig(
-        system_instruction=PROMPT
+        system_instruction=PDF_PROMPT
       ),
       contents=text
+    )
+    return response.text
+
+def chat_with_gemini(text, question):
+    response = gemini_client.models.generate_content(
+      model="gemini-2.0-flash",
+      config=types.GenerateContentConfig(
+        system_instruction=CHAT_PROMPT
+      ),
+      contents=(text + '\n\n' + question)
     )
     return response.text
