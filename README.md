@@ -19,10 +19,22 @@ A Flask-based API service that provides AI-powered summarization for PDF documen
 #### Request Body
 
 - `file`: The PDF file to summarize
+- `pdf_text`: The text extracted from the PDF
 
 #### Response
 
 - `summary`: The summary of the PDF file
+
+### `POST /api/summarize/chat`
+
+#### Request Body
+
+- `pdf_text`: The text extracted from the PDF
+- `question`: Question asked in the chat
+
+#### Response
+
+- `summary`: The answer to the question asked to the AI
 
 ## Setup and Installation
 
