@@ -55,8 +55,8 @@ Create a `.env` file with the following variables:
 
 1. Clone the repository
    ```
-   git clone https://github.com/yourusername/pdf-summarizer-api.git
-   cd pdf-summarizer-api
+   git clone https://github.com/suyashpatil78/docdigest-backend.git
+   cd docdigest-backend
    ```
 
 2. Install dependencies
