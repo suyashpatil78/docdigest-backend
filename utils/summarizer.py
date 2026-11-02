@@ -20,7 +20,7 @@ def summarize_with_gpt(text):
 
 def summarize_with_gemini(text):
     response = gemini_client.models.generate_content(
-      model="gemini-3.8-flash",
+      model="gemini-3.1-flash-lite",
       config=types.GenerateContentConfig(
         system_instruction=PDF_PROMPT
       ),
