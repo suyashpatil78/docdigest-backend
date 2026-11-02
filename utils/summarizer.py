@@ -30,7 +30,7 @@ def summarize_with_gemini(text):
 
 def chat_with_gemini(text, question):
     response = gemini_client.models.generate_content(
-      model="gemini-2.0-flash",
+      model="gemini-3.1-flash-lite",
       config=types.GenerateContentConfig(
         system_instruction=CHAT_PROMPT
       ),
